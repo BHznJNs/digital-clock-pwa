@@ -1,22 +1,22 @@
 const cacheName = "digitalClock-v1"
 const appShellFiles = [
-    "/",
-    "/index.html",
-    "/favicon.png",
-    "/script/main.js",
-    "/script/register.js",
-    "/style/style.css",
-    "/style/color.css",
-    "/assets/dark.svg",
-    "/assets/light.svg",
-    "/assets/manifest.json",
-    "/assets/font/DS-DIGIB.TTF",
-    "/assets/githubIcons/dark.svg",
-    "/assets/githubIcons/light.svg",
+    "./",
+    "./index.html",
+    "./script/main.js",
+    "./script/register.js",
+    "./style/style.css",
+    "./style/color.css",
+    "./assets/dark.svg",
+    "./assets/light.svg",
+    "./assets/favicon.png",
+    "./assets/manifest.json",
+    "./assets/font/DS-DIGIB.TTF",
+    "./assets/githubIcons/dark.svg",
+    "./assets/githubIcons/light.svg",
 ]
 
 self.addEventListener("install", (e) => {
-    console.log("[Service Worker] Install")
+    console.log("[Service Worker] Installing...")
     e.waitUntil((async () => {
         const cache = await caches.open(cacheName)
         console.log("[Service Worker] Caching all: app shell and content")
