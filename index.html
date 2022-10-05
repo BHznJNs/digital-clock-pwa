@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字时钟</title>
+    <link rel="stylesheet" href="/style/color.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="192x192">
+    <script src="/script/register.js"></script>
+</head>
+<body>
+    <div id="outer" class="light">
+        <script>
+            const OUTER = document.querySelector("#outer")
+            // 获取并设置本地储存的颜色主题
+            const colorTheme = localStorage.getItem("colorTheme")
+            if (colorTheme) {
+                OUTER.classList.remove(OUTER.classList[0])
+                OUTER.classList.add(colorTheme)
+            }
+        </script>
+
+        <div id="gh-logo" onclick="location.href='https://github.com/BHznJNs/front-end-exercises'">
+            <img class="gh-logo-img" alt="github-logo-img" src="/assets/githubIcons/light.svg">
+        </div>
+
+        <div id="timebox">
+            <div id="hour" class="time"></div>
+            <div class="time-sep">:</div>
+            <div id="minute" class="time"></div>
+            <div class="time-sep">:</div>
+            <div id="second" class="time"></div>
+        </div>
+        <!-- 切换界面颜色主题按钮 -->
+        <div id="changer" onclick="changeTheme()"></div>
+    </div>
+    
+    <script src="/script/main.js"></script>
+</body>
+</html>

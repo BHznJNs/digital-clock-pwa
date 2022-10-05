@@ -1,0 +1,92 @@
+* {
+    -webkit-user-select: none;
+            user-select: none;
+}
+
+@font-face {
+    font-family: DS-font;
+    src: url(../assets/font/DS-DIGIB.TTF);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: .3s;
+}
+
+/* Github Logo */
+#gh-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6rem;
+    height: 6rem;
+    border-bottom-right-radius: 100%;
+    cursor: pointer;
+    transition: .3s;
+}
+.gh-logo-img {
+    width: 4rem;
+    padding: .6rem .6rem;
+    transform: rotate(-45deg);
+    transition: .3s;
+}
+/* Github Logo */
+
+/* Time Box */
+#timebox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+.time, .time-sep {
+    font-size: calc(6rem + 10vw);
+    font-family: DS-font;
+}
+
+.time {
+    padding: 0 .6rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    transition-duration: .5s;
+}
+.time.changing {
+    color: #808080 !important;
+    background-color: #808080 !important;
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.time-sep {
+    margin: 0 .6rem
+}
+/* Time Box End */
+
+/* Changer */
+#changer {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    padding: .2rem;
+    background-size: cover;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
