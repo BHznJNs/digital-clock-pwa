@@ -51,17 +51,23 @@ setInterval(() => {
 
     numChanger()
 }, 1000)
-// 离开界面时，保存颜色主题
-addEventListener("beforeunload", () => {
-    localStorage.setItem("colorTheme", OUTER.classList[0])
-})
+
+
+const outer = document.querySelector("#outer")
+// 进入界面时，读取系统主题偏好
+const themeMedia = window.matchMedia("(prefers-color-scheme: light)")
+if (themeMedia.matches) {
+    outer.classList.add("light")
+} else {
+    outer.classList.add("dark")
+}
 // 切换颜色主题函数
-function changeTheme() {
-    let originTheme = OUTER.classList[0]
-    OUTER.classList.remove(OUTER.classList[0])
+document.querySelector("#changer").onclick = () => {
+    let originTheme = outer.classList[0]
+    outer.classList.remove(outer.classList[0])
     if (originTheme == "light") {
-        OUTER.classList.add("dark")
+        outer.classList.add("dark")
     } else {
-        OUTER.classList.add("light")
+        outer.classList.add("light")
     }
 }
