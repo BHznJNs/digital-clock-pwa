@@ -5,7 +5,6 @@ const appShellFiles = [
     "./script/NoSleep.js/index.js",
     "./script/NoSleep.js/media.js",
     "./script/register.js",
-    "./script/register.js",
     "./style/style.css",
     "./style/color.css",
     "./assets/dark.svg",
@@ -29,6 +28,7 @@ self.addEventListener("install", (e) => {
 self.addEventListener("activate", (e) => {
     console.log("[Service Worker] Activated")
 })
+// 拦截 fetch 操作
 self.addEventListener("fetch", (e) => {
     const target = e.request
     if (caches.match(target)) {
