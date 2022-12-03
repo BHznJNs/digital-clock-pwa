@@ -2,6 +2,9 @@ const cacheName = "digitalClock-v1"
 const appShellFiles = [
     "./", "./index.html",
     "./script/main.js",
+    "./script/NoSleep.js/index.js",
+    "./script/NoSleep.js/media.js",
+    "./script/register.js",
     "./script/register.js",
     "./style/style.css",
     "./style/color.css",

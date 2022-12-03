@@ -1,4 +1,4 @@
-import NoSleep from "./NoSleep.js"
+import NoSleep from "./NoSleep.js/index.js"
 
 const noSleep = new NoSleep()
 
