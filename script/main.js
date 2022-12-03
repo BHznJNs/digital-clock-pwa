@@ -1,7 +1,11 @@
 import NoSleep from "./NoSleep.js"
 
-const nosleep = new NoSleep()
-nosleep.enable()
+const noSleep = new NoSleep()
+
+document.addEventListener('click', function enableNoSleep() {
+    document.removeEventListener('click', enableNoSleep, false);
+    noSleep.enable();
+}, false);
 
 const DATE = {}
 // 获取时间元素
