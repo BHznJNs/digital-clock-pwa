@@ -1,3 +1,8 @@
+import NoSleep from "./NoSleep.js"
+
+const nosleep = new NoSleep()
+nosleep.enable()
+
 const DATE = {}
 // 获取时间元素
 const TimeElements = {
